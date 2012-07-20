@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Springmvc Home</title>
+</head>
+<body>
+<h1>
+	Hello world! - 
+</h1>
+$controllerMessage<br/>
+<br/>
+Here we get the date from the DateTool:  $date.medium <br/>
+<br/>
+<a href="person/list">Go to the person list</a>
+</body>
+</html>
