@@ -1,4 +1,4 @@
-package com.lvls.model;
+package com.dredom.model;
 
 import java.io.Serializable;
 

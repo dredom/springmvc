@@ -1,9 +1,10 @@
-package com.lvls.controller;
+package com.dredom.controller;
 
 import java.util.List;
 
-import com.lvls.dao.PersonDao;
-import com.lvls.model.Person;
+import com.dredom.dao.PersonDao;
+import com.dredom.model.Person;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

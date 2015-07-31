@@ -1,9 +1,11 @@
-package com.lvls.dao;
+package com.dredom.dao;
 
 import java.util.List;
 
-import com.lvls.controller.DataInitializer;
-import com.lvls.model.Person;
+import com.dredom.controller.DataInitializer;
+import com.dredom.dao.PersonDao;
+import com.dredom.model.Person;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

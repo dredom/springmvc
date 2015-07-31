@@ -1,4 +1,4 @@
-package com.lvls.controller;
+package com.dredom.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,7 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import com.lvls.model.Person;
+import com.dredom.controller.PersonController;
+import com.dredom.model.Person;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

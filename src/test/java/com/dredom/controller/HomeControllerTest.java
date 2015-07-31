@@ -1,10 +1,12 @@
-package com.lvls.controller;
+package com.dredom.controller;
 
 import junit.framework.Assert;
 
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
+
+import com.dredom.controller.HomeController;
 
 public class HomeControllerTest {
 

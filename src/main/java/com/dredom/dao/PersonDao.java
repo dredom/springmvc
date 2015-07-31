@@ -1,11 +1,12 @@
-package com.lvls.dao;
+package com.dredom.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.lvls.model.Person;
+import com.dredom.model.Person;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

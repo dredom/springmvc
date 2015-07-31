@@ -1,4 +1,4 @@
-package com.lvls.controller;
+package com.dredom.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.lvls.model.Person;
+import com.dredom.model.Person;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
