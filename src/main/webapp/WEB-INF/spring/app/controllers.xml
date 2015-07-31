@@ -13,4 +13,8 @@
 		configure as beans -->
 	<context:component-scan base-package="com.dredom" />
 	<tx:annotation-driven />
+	
+	<bean name="research" class="com.dredom.controller.ResearchController">
+	   <property name="noticeFile" value="WEB-INF/pub/notice.txt" />
+	</bean>
 </beans>

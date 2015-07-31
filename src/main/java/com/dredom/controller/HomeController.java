@@ -2,6 +2,7 @@ package com.dredom.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,8 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(HomeController.class);
 
+	private Resource noticeFile;
+
 	/**
 	 * Selects the home page and populates the model with a message
 	 */
@@ -24,8 +27,13 @@ public class HomeController {
 		logger.info("Welcome home!");
 		model.addAttribute("controllerMessage",
 				"This is the message from the controller!");
+		model.addAttribute("noticeFile", noticeFile);
 		return "home";
 	}
-	
+
+    public void setNoticeFile(Resource noticeFile) {
+        this.noticeFile = noticeFile;
+    }
+
 
 }

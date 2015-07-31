@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+<h1>Listing People</h1>
+#foreach( $v_person in $people )
+	<a href="edit?id=$v_person.id">$v_person.id -
+	$v_person.firstName $v_person.lastName</a>
+	<br />
+#end
+<a href="edit"> Add Person</a>
+</body>
+</html>
