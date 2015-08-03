@@ -20,6 +20,17 @@
     <br/>URL: ${noticeFile.URL}
 </section>
 <br/>
+<section>
+<c:if test="${not empty testFile}">
+    Test file: ${testFile}
+    <br/>filename: ${testFile.filename}
+    <br/>file:  ${testFile.file}
+</c:if>
+<c:if test="${empty testFile}">
+    <p>Add command-line -Dexternal.location=my/ext/dir </p>
+</c:if>
+</section>
+<br/>
 <br/>
 
     <footer>

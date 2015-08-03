@@ -21,6 +21,10 @@ public class ResearchController {
             .getLogger(ResearchController.class);
 
     private Resource noticeFile;
+    /**
+     * Resource translates ${token} values in Spring config.
+     */
+    private Resource testFile;
 
     /**
      * Selects the page http://localhost:8081/spring/spring/research
@@ -29,11 +33,18 @@ public class ResearchController {
     public String home(Model model) {
         logger.info("ResearchController home!");
         model.addAttribute("noticeFile", noticeFile);
+        if (testFile.exists()) {
+            model.addAttribute("testFile", testFile);
+        }
         return "research";
     }
 
     public void setNoticeFile(Resource noticeFile) {
         this.noticeFile = noticeFile;
+    }
+
+    public void setTestFile(Resource testFile) {
+        this.testFile = testFile;
     }
 
 }
