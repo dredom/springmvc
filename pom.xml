@@ -10,11 +10,23 @@
 	<properties>
 	   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	   <jetty.version>6.1.26</jetty.version>
-	   <spring.version>4.1.7.RELEASE</spring.version>
+	   <spring.version>4.3.2.RELEASE</spring.version>
 	   <slf4j.version>1.5.10</slf4j.version>
 	   <java.version>1.8</java.version>
        <junit.version>4.12</junit.version>
 	</properties>
+
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-framework-bom</artifactId>
+            <version>${spring.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
 	<dependencies>
 
@@ -61,7 +73,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
 			<exclusions>
 				<!-- Exclude Commons Logging in favor of SLF4j -->
 				<exclusion>
@@ -73,18 +84,15 @@
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context-support</artifactId>
-		    <version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
@@ -92,7 +100,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -202,7 +209,7 @@
 				<version>${jetty.version}</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<contextPath>/spring</contextPath>
+					<contextPath>/</contextPath>
 					<connectors>
 	                    <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 	                      <port>8081</port>

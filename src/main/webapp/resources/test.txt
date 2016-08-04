@@ -1,0 +1,4 @@
+How now brown cow.
+
+URL: http://localhost:8081/spring/resources/test.txt
+See servlet-context.xml <resources mapping="/resources/**" location="/resources/" />

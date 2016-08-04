@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>SpringMVC - Home</title>
 	 <meta charset="utf-8">
     <!-- NOTE: Static sites shouldn't have the meta-viewport because it would force the user to scroll to see the full page -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
