@@ -23,8 +23,8 @@
 <section>
 <c:if test="${not empty testFile}">
     Test file: ${testFile}
-    <br/>filename: ${testFile.filename}
-    <br/>file:  ${testFile.file}
+    <br/>path: ${testFile.file.path} filename: ${testFile.filename}
+    <br/>canonical path:  ${testFile.file.canonicalPath}
 </c:if>
 <c:if test="${empty testFile}">
     <p>Add command-line -Dexternal.location=my/ext/dir </p>
