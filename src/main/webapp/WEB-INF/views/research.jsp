@@ -7,20 +7,21 @@
 	<meta charset="utf-8">
     <!-- NOTE: Static sites shouldn't have the meta-viewport because it would force the user to scroll to see the full page -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<link rel="stylesheet" type="text/css" href="resources/css/screen.css">
 </head>
 <body>
-<h1>
+ <header>
+  <h1>
 	Hello research!
-</h1>
-<section>
+  </h1>
+ </header>
+<div class="panel">
     Notice file: ${noticeFile}
     <br/>filename: ${noticeFile.filename}
     <br/>file:  ${noticeFile.file}
     <br/>URL: ${noticeFile.URL}
-</section>
-<br/>
-<section>
+</div>
+<div class="panel">
 <c:if test="${not empty testFile}">
     Test file: ${testFile}
     <br/>path: ${testFile.file.path} filename: ${testFile.filename}
@@ -29,9 +30,7 @@
 <c:if test="${empty testFile}">
     <p>Add command-line -Dexternal.location=my/ext/dir </p>
 </c:if>
-</section>
-<br/>
-<br/>
+</div>
 
     <footer>
     Research controller /
