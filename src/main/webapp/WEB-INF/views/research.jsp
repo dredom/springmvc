@@ -15,12 +15,22 @@
 	Hello research!
   </h1>
  </header>
+ 
+<div class="panel">
+    <h1>User-Agent detection with MobileESP</h1>
+    Mobile: ${detection.mobile} <br/>
+    Tablet: ${detection.tablet} <br/>
+    Android: ${detection.android} <br/>
+    iPhone: ${detection.iphone} <br/>
+</div>
+
 <div class="panel">
     Notice file: ${noticeFile}
     <br/>filename: ${noticeFile.filename}
     <br/>file:  ${noticeFile.file}
     <br/>URL: ${noticeFile.URL}
 </div>
+
 <div class="panel">
 <c:if test="${not empty testFile}">
     Test file: ${testFile}
