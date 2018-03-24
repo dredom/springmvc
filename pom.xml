@@ -14,6 +14,9 @@
 	   <slf4j.version>1.5.10</slf4j.version>
 	   <java.version>1.8</java.version>
        <junit.version>4.12</junit.version>
+       <maven.compiler.source>1.8</maven.compiler.source>
+       <maven.compiler.target>1.8</maven.compiler.target>
+       <pmd.version>5.8.0</pmd.version>
 	</properties>
 
 <dependencyManagement>
@@ -195,6 +198,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
 	</dependencies>
 
 
@@ -219,15 +223,6 @@
 				</configuration>
 			</plugin>
 
-			<!-- Ensures we are compiling at 1.6 level -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
 
 			<!-- Tomcat plugin for embedded tomcat -->
 			<plugin>
@@ -239,6 +234,48 @@
 				</configuration>
 			</plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.8</version>
+        <configuration>
+            <rulesets>
+            <!--  
+                <ruleset>rulesets/java/maven-pmd-plugin-default.xml</ruleset>
+            -->
+                <ruleset>rulesets/GDS/SecureCoding.xml</ruleset>
+            </rulesets>
+        </configuration>
+        <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.github.albfernandez/pmd-gds -->
+			<dependency>
+			    <groupId>com.github.albfernandez</groupId>
+			    <artifactId>pmd-gds</artifactId>
+			    <version>2.16.1</version>
+			</dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-core</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-java</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-javascript</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-jsp</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+
+        </dependencies>
+      </plugin>
 		</plugins>
 	</build>
 </project>
