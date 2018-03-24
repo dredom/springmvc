@@ -247,9 +247,7 @@
         <version>3.8</version>
         <configuration>
             <rulesets>
-            <!--  
-                <ruleset>rulesets/java/maven-pmd-plugin-default.xml</ruleset>
-            -->
+                <ruleset>rulesets/java/basic.xml</ruleset>
                 <ruleset>rulesets/GDS/SecureCoding.xml</ruleset>
             </rulesets>
         </configuration>
