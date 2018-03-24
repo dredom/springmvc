@@ -17,5 +17,9 @@
 	<bean name="research" class="com.dredom.controller.ResearchController">
 	   <property name="noticeFile" value="WEB-INF/pub/notice.txt" />
 	   <property name="testFile" value="file://${external.location}/test1.txt" />
+	   <property name="detector" ref="detector" />
+	</bean>
+	
+	<bean name="detector" class="com.dredom.service.DetectorImpl">
 	</bean>
 </beans>
